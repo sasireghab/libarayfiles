@@ -1,4 +1,4 @@
 def call()
 {
-	echo "print message..."
+	echo "Hello from test branch..."
 }
