@@ -10,7 +10,7 @@ def call(Map pipelineParams) {
           steps
           {
             echo "from jenkinsfile..."
-            echo "pipelineParams.NAME"
+            echo "pipelineParams.name"
           }
       }
       stage('from lib')
