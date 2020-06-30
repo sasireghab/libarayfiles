@@ -1,4 +1,5 @@
 def call(Map pipelineParams) {
+  
   pipeline
   {
     agent any 
@@ -6,22 +7,22 @@ def call(Map pipelineParams) {
     {
       stage('from jenkinsfile')
       {
-        steps
-        {
-          echo "from jenkinsfile..."
-          echo "pipelineParams.NAME"
-        }
+          steps
+          {
+            echo "from jenkinsfile..."
+            echo "pipelineParams.NAME"
+          }
       }
       stage('from lib')
       {
-        steps
-        {
-          fromLibarary()
-          //fromTestBranch()
-                echo "HELLLLOOO"
-        }
+          steps
+          {
+            fromLibarary()
+            //fromTestBranch()
+            echo "HELLLLOOO"
+          }
       }
-
     }
   }
+  
 }
