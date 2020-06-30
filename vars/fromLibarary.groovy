@@ -1,7 +1,4 @@
 
-/*def call() {
-	echo "Hello from shared libarary.."
-}*/
 def call(Map pipelineParams) {
 
     pipeline {
