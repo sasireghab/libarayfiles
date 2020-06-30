@@ -1,11 +1,6 @@
-def call(body) {
-    // evaluate the body block, and collect configuration into the object
-    def pipelineParams= [:]
-    body.resolveStrategy = Closure.DELEGATE_FIRST
-    body.delegate = pipelineParams
-    body()
-
-    pipeline {
+def call(Map pipelineParams) {
+    pipeline
+    {
         agent any 
         stages
         {
@@ -13,9 +8,10 @@ def call(body) {
             {
                 steps
                 {
-                  echo "Vishaal Kutty"
+                    echo "from jenkinsfile..."
+                    echo "Hoooooooo"
                 }
             }
-         }
-     }
+        }
+    }
 }
