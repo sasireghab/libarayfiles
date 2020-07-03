@@ -14,8 +14,10 @@ myTemplate{ test }
 @Library('MyJenkins_Library') _
 def jsonSlurper = new JsonSlurper()
 
-File fl = new File('${workspace}/jenkinsConfig.json')
+//File fl = new File('${WORKSPACE}/jenkinsConfig.json')
 
 // parse(File file) method is available since 2.2.0
-def obj = jsonSlurper.parse(fl)
-echo "OBJ:: $obj"
+//def obj = jsonSlurper.parse(fl)
+//echo "OBJ:: $obj"
+echo "******"
+echo "${WORKSPACE}"
