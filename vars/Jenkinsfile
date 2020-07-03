@@ -6,7 +6,7 @@ def test = new JsonSlurper().parseText '''
 {"MY_NAME": "Jenkins name"}
 '''
 
-println test.MY_NAME
+println test
    
 
 myTemplate{ test }
