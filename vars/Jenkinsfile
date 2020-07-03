@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 echo "Hello from jenkins shared library jenkinsfile....."
 //def pipelineParams= [:]
 def test = new JsonSlurper().parseText '''
