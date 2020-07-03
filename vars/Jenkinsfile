@@ -11,6 +11,6 @@ def pipelineParams= [:]
 //echo "json :: $json"
 
 echo "*****"
-//def pipelineParams= [MY_NAME:"PVR_Test_Product"]
+def pipelineParams= { MY_NAME = 'PIPELINEPARAM' }
 
-myTemplate{ MY_NAME = 'PIPELINE PARAM' }
+myTemplate{ pipelineParams }
