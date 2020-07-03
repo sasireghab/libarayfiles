@@ -19,13 +19,7 @@
          }
       }
 }*/
-def call(body) {
-  def pipelineParams = [:]
-  echo "pipelineParams ::::::: ${pipelineParams}"
-  body.resolveStrategy = Closure.DELEGATE_FIRST
-  body.delegate = pipelineParams
-  body()
-  
+def call(Map pipelineParams) {
   
   pipeline{	
     agent any	
