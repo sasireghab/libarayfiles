@@ -5,31 +5,15 @@ echo "Hello from jenkins shared library jenkinsfile....."
 def test = new JsonSlurper().parseText '''
 {"resources": [
     {
-        "metadata": {
-            "guid": "cya",
-            "url": "dummy.test"
-        },
-        "entity": {
-            "name": "system",
-            "status": "active"
-        }
-    },
-    {
-        "metadata": {
-            "guid": "cya",
-            "url": "dummy.test"
-        },
-        "entity": {
-            "name": "system",
-            "status": "active"
-        }
+        "metadata": "entity",
+        "entity": "system"
     }
 ]}
 '''
 
 test.resources.each {
-    println it.metadata.guid
-    println it.entity.name
+    println it.metadata
+    println it.entity
 }
 
 myTemplate{ test }
