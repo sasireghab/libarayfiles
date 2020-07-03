@@ -1,2 +1,3 @@
 echo "Hello from jenkins shared library jenkinsfile....."
+def pipelineParams= [:]
 myTemplate(Map pipelineParams)
