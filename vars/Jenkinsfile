@@ -1,2 +1,2 @@
 echo "Hello from jenkins shared library jenkinsfile....."
-myTemplate(jenkinsConfig)
+myTemplate('jenkinsConfig')
