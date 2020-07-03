@@ -1,2 +1,3 @@
 echo "Hello from jenkins shared library jenkinsfile....."
-myTemplate('jenkinsConfig')
+def CONFIG = { MY_NAME : 'config' }
+myTemplate(CONFIG)
