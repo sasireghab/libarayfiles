@@ -13,7 +13,7 @@ echo "Hello from jenkins shared library jenkinsfile....."
 echo "*****"
 //def pipelineParams= [ MY_NAME = "PIPELINEPARAM" ]
 
-def pp = """{"MY_NAME":[],"2":[],"3":[{"MY_NAME":"PVR_Test_Product","id":"100048"}],"4":[],"5":[]}"""
+def pp = """{"MY_NAME":"PIPELINEPARAM"}"""
 
 
 def json = new groovy.json.JsonSlurper().parseText(pp)
