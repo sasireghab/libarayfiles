@@ -24,7 +24,7 @@ def call(body) {
   body.resolveStrategy = Closure.DELEGATE_FIRST
   body.delegate = pipelineParams
   body()
-  echo "MY_NAME ::::::: ${pipelineParams.MY_NAME}"
+  echo "pipelineParams ::::::: ${pipelineParams}"
   
   pipeline{	
     agent any	
