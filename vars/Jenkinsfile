@@ -1,5 +1,5 @@
 echo "Hello from jenkins shared library jenkinsfile....."
-def pipelineParams= [:]
+//def pipelineParams= [:]
 //def string = """{"MY_NAME" : "PIPELINEPARAM" }"""
 //def string = """{"MY_NAME":[],"2":[],"3":[{"MY_NAME":"PVR_Test_Product","id":"100048"}],"4":[],"5":[]}"""
 //echo "string :: $string"
