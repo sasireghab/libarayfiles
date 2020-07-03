@@ -1,5 +1,7 @@
 echo "Hello from jenkins shared library jenkinsfile....."
 //def pipelineParams= [:]
-def string = """{"MY_NAME" : "PIPELINEPARAM" }"""
+//def string = """{"MY_NAME" : "PIPELINEPARAM" }"""
+def string = """{"MY_NAME":[],"2":[],"3":[{"MY_NAME":"PVR_Test_Product","id":"100048"}],"4":[],"5":[]}"""
 def json = new groovy.json.JsonSlurper().parseText(string)
+
 myTemplate(json)
