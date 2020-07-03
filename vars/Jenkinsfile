@@ -11,6 +11,14 @@ echo "Hello from jenkins shared library jenkinsfile....."
 //echo "json :: $json"
 
 echo "*****"
-def pipelineParams= [ MY_NAME = "PIPELINEPARAM" ]
+//def pipelineParams= [ MY_NAME = "PIPELINEPARAM" ]
 
-myTemplate{ pipelineParams }
+def pp = """{"MY_NAME":[],"2":[],"3":[{"MY_NAME":"PVR_Test_Product","id":"100048"}],"4":[],"5":[]}"""
+
+
+def json = new groovy.json.JsonSlurper().parseText(pp)
+
+//if( json instanceof Map)
+echo "json :: $json"
+
+myTemplate{ json }
