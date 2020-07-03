@@ -12,6 +12,8 @@ println test
 myTemplate{ test }
 */
 
+git branch: 'master', credentialsId: 'Git username', url: 'https://github.com/sasireghab/invoke-jenkins-lib.git'
+
 def jsonSlurper = new JsonSlurper()
 
 File fl = new File('${workspace}/jenkinsConfig.json')
