@@ -20,4 +20,5 @@ def jsonSlurper = new JsonSlurper()
 //def obj = jsonSlurper.parse(fl)
 //echo "OBJ:: $obj"
 echo "******"
-echo "${WORKSPACE}"
+def workspace =  ${WORKSPACE}/source:/slate/source -v 
+echo "$workspace"
