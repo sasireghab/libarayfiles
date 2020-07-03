@@ -11,6 +11,6 @@ if( json instanceof Map)
 echo "json :: $json"
 
 echo "*****"
-//def pipelineParams= [:]
+def pipelineParams= [{"MY_NAME":"PVR_Test_Product"]
 
-myTemplate(json)
+myTemplate(pipelineParams)
