@@ -13,4 +13,4 @@ def pipelineParams= [:]
 echo "*****"
 //def pipelineParams= [MY_NAME:"PVR_Test_Product"]
 
-myTemplate(pipelineParams)
+myTemplate{ MY_NAME = 'PIPELINE PARAM' }
