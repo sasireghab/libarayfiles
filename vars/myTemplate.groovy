@@ -25,7 +25,8 @@ def call(Map pipelineParams) {
     agent any	
       stages	{		
           stage('from jenkinsfile')		{			
-              steps			{				
+              steps			{		
+                  git branch: 'master', credentialsId: 'Git username', url: 'https://github.com/sasireghab/invoke-jenkins-lib.git'           
                   echo "Hiiiiiii....."	
                 }		
            }		
