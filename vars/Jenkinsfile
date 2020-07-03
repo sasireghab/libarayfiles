@@ -7,8 +7,10 @@ echo "string :: $string"
 
 def json = new groovy.json.JsonSlurper().parseText(string)
 
-assert json instanceof Map
+if( json instanceof Map)
 echo "json :: $json"
+
+echo "*****"
 //def pipelineParams= [:]
 
 myTemplate(json)
