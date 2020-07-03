@@ -4,7 +4,7 @@ def call(Map pipelineParams) {
       stages	{		
           stage('from jenkinsfile')		{			
               steps			{				
-                  echo "Hi....."			
+                  echo "Hi..... from test branch library files"			
                 }		
            }		
            stage('from lib')		{	
