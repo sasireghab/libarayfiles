@@ -3,17 +3,10 @@ import groovy.json.JsonSlurper
 echo "Hello from jenkins shared library jenkinsfile....."
 //def pipelineParams= [:]
 def test = new JsonSlurper().parseText '''
-{"resources": [
-    {
-        "metadata": "entity",
-        "entity": "system"
-    }
-]}
+{"MY_NAME": "Jenkins name"}
 '''
 
-test.resources.each {
-    println it.metadata
-    println it.entity
-}
+println test.MY_NAME
+   
 
 myTemplate{ test }
