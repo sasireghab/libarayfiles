@@ -1,14 +1,14 @@
 echo "Hello from jenkins shared library jenkinsfile....."
 def pipelineParams= [:]
 //def string = """{"MY_NAME" : "PIPELINEPARAM" }"""
-def string = """{"MY_NAME":[],"2":[],"3":[{"MY_NAME":"PVR_Test_Product","id":"100048"}],"4":[],"5":[]}"""
-echo "string :: $string"
+//def string = """{"MY_NAME":[],"2":[],"3":[{"MY_NAME":"PVR_Test_Product","id":"100048"}],"4":[],"5":[]}"""
+//echo "string :: $string"
 //def pipelineParams= [:]
 
-def json = new groovy.json.JsonSlurper().parseText(string)
+//def json = new groovy.json.JsonSlurper().parseText(string)
 
-if( json instanceof Map)
-echo "json :: $json"
+//if( json instanceof Map)
+//echo "json :: $json"
 
 echo "*****"
 //def pipelineParams= [MY_NAME:"PVR_Test_Product"]
