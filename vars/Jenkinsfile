@@ -1,2 +1,2 @@
 echo "Hello from jenkins shared library jenkinsfile....."
-myTemplate(Map jenkinsConfig)
+myTemplate(Map pipelineParams)
