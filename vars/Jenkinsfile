@@ -2,7 +2,7 @@ import groovy.json.JsonSlurper
 
 echo "Hello from jenkins shared library jenkinsfile....."
 //def pipelineParams= [:]
-/*def test = new JsonSlurper().parseText '''
+def test = new JsonSlurper().parseText '''
 {"MY_NAME": "Jenkins name"}
 '''
 
@@ -10,15 +10,14 @@ println test
    
 
 myTemplate{ test }
-*/
-@Library('MyJenkins_Library') _
-def jsonSlurper = new JsonSlurper()
+
+//@Library('MyJenkins_Library') _
+//def jsonSlurper = new JsonSlurper()
 
 //File fl = new File('${WORKSPACE}/jenkinsConfig.json')
 
 // parse(File file) method is available since 2.2.0
 //def obj = jsonSlurper.parse(fl)
+//echo "******"
 //echo "OBJ:: $obj"
-echo "******"
-def workspace =  ${WORKSPACE}/source:/slate/source -v 
-echo "$workspace"
+
