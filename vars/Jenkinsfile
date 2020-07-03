@@ -11,6 +11,6 @@ echo "Hello from jenkins shared library jenkinsfile....."
 //echo "json :: $json"
 
 echo "*****"
-def pipelineParams= [ MY_NAME = 'PIPELINEPARAM' ]
+def pipelineParams= [ MY_NAME : "PIPELINEPARAM" ]
 
 myTemplate{ pipelineParams }
