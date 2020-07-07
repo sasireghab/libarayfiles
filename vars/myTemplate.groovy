@@ -1,3 +1,4 @@
+import groovy.json.JsonSlurper
 /*def call(Map pipelineParams) {
   pipeline{	
     agent any	
@@ -19,7 +20,7 @@
          }
       }
 }*/
-def call(Map pipelineParams) {
+def call(String pipelineParams) {
   
   pipeline{	
     agent any	
@@ -32,11 +33,14 @@ def call(Map pipelineParams) {
            }		
            stage('from lib')		{	
               environment {
-                    def name = "${pipelineParams.MY_NAME}" 
+                   // def name = "${pipelineParams.MY_NAME}" 
                 }
-              steps			{				
+              steps			{	
+                JsonSlurper slurper = new JsonSlurper()
+                Map parsedJson = slurper.parseText(pipelineParams)
+                    println parsedJson
                   fromLibarary()
-                  echo "MY_NAME :: $name"
+                  //echo "MY_NAME :: $name"
                }		
             }		
          }
