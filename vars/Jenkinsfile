@@ -11,9 +11,10 @@ def test = new JsonSlurper().parseText '''
 String currentDir = new File(".").getAbsoluteFile().getParent()
 println currentDir
 
-//def inputJSON = new JsonSlurper().parse(inputFile)
+def inputFile = new File('/var/jenkins_home/workspace/Lib_client_master/vars/config.json')
+def inputJSON = new JsonSlurper().parse(inputFile)
 
-//println inputFile
+println inputJSON
 
 println test
    
