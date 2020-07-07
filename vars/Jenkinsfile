@@ -6,7 +6,7 @@ def test = new JsonSlurper().parseText '''
 {"MY_NAME": "Jenkins name"}
 '''echo "${WORKSPACE}"
 //def inputFile = new File('${WORKSPACE}/vars/config.json')
-def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI()
+def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI())
 //def inputJSON = new JsonSlurper().parse(inputFile)
 
 println inputFile
