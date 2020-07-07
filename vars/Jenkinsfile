@@ -6,6 +6,11 @@ def test = new JsonSlurper().parseText '''
 {"MY_NAME": "Jenkins name"}
 '''
 
+def inputFile = new File('config.json')
+def inputJSON = new JsonSlurper().parse(inputFile)
+
+println inputJSON
+
 println test
    
 
