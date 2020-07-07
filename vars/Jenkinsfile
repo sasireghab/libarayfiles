@@ -5,9 +5,8 @@ echo "Hello from jenkins shared library jenkinsfile....."
 def test = new JsonSlurper().parseText '''
 {"MY_NAME": "Jenkins name"}
 '''
-String currentDir = new File(".").getAbsolutePath()
-println currentDir
-def inputFile = new File(currentDir + '/config.json')
+echo "${WORKSPACE}"
+def inputFile = new File('${WORKSPACE}/vars/config.json')
 def inputJSON = new JsonSlurper().parse(inputFile)
 
 println inputJSON
