@@ -7,19 +7,21 @@ def test = new JsonSlurper().parseText '''
 '''
 //def inputFile = new File('${WORKSPACE}/vars/config.json')
 //def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI())
-
 pipeline {
-    agent { 
-        any
-    }
+    agent any
+
     stages {
-        stage('Test'){
-            steps{
+        
+        stage('Test') {
+            steps {
+                echo 'Testing..'
                 echo "${env.WORKSPACE}"
             }
         }
+        
     }
 }
+
 
 
 
