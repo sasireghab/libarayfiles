@@ -14,6 +14,19 @@ pipeline {
             steps {
                 echo 'Testing..'
                 echo "${env.WORKSPACE}"
+                def inputFile = new File('${env.WORKSPACE}/vars/config.json')
+                def inputJSON = new JsonSlurper().parse(inputFile)
+
+                println inputJSON
+
+                def test = new JsonSlurper().parseText '''
+                {"MY_NAME": "Jenkins name"}
+                '''
+
+                println test
+   
+
+                myTemplate{ test }
             }
         }
         
@@ -23,19 +36,7 @@ pipeline {
 
 
 
-def inputFile = new File('${WORKSPACE}/vars/config.json')
-def inputJSON = new JsonSlurper().parse(inputFile)
 
-println inputJSON
-
-def test = new JsonSlurper().parseText '''
-{"MY_NAME": "Jenkins name"}
-'''
-
-println test
-   
-
-myTemplate{ test }
 
 //@Library('MyJenkins_Library') _
 //def jsonSlurper = new JsonSlurper()
