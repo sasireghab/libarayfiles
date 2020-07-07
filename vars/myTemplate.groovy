@@ -1,5 +1,5 @@
-import groovy.json.JsonSlurper
-/*def call(Map pipelineParams) {
+//import groovy.json.JsonSlurper
+def call(Map pipelineParams) {
   pipeline{	
     agent any	
       stages	{		
@@ -19,7 +19,8 @@ import groovy.json.JsonSlurper
             }		
          }
       }
-}*/
+}
+/*
 def call(Map pipelineParams) {
   
   pipeline{	
@@ -48,3 +49,4 @@ def call(Map pipelineParams) {
          }
       }
 }
+*/
