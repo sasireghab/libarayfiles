@@ -36,7 +36,7 @@ JsonSlurper slurper = new JsonSlurper()
 Map parsedJson = slurper.parseText(jsonString)
                     println parsedJson
                 //myTemplate{ jsonString }
-                    myTemplate{ pipelineParams }
+                    //myTemplate{ pipelineParams }
                 }
                 
             }
@@ -44,6 +44,7 @@ Map parsedJson = slurper.parseText(jsonString)
         
     }
 }
+myTemplate{ pipelineParams }
 
    
 
