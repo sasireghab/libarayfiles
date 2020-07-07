@@ -8,8 +8,19 @@ def test = new JsonSlurper().parseText '''
 //def inputFile = new File('${WORKSPACE}/vars/config.json')
 //def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI())
 
+pipeline {
+    agent { 
+        any
+    }
+    stages {
+        stage('Test'){
+            steps{
+                echo "${env.WORKSPACE}"
+            }
+        }
+    }
+}
 
-echo "${env.WORKSPACE}"
 
 
 //def inputFile = new File('/var/jenkins_home/workspace/Lib_client_master/vars/config.json')
