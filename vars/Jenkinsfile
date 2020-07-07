@@ -14,13 +14,9 @@ pipeline {
             steps {
                 echo 'Testing..'
                 echo "${env.WORKSPACE}"
-                def config = "${env.WORKSPACE}/vars/config.json"
-            }
-        }
-        
-    }
-}
-def inputFile = new File(config)
+                script {
+                    
+                    def inputFile = new File("${env.WORKSPACE}/vars/config.json")
                 def inputJSON = new JsonSlurper().parse(inputFile)
 
                 println inputJSON
@@ -30,9 +26,18 @@ def inputFile = new File(config)
                 '''
 
                 println test
+                myTemplate{ test }
+                }
+                
+            }
+        }
+        
+    }
+}
+
    
 
-                myTemplate{ test }
+               
 
 
 
