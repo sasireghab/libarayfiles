@@ -32,9 +32,9 @@ def call(String pipelineParams) {
                 }		
            }		
            stage('from lib')		{	
-              environment {
+             // environment {
                    // def name = "${pipelineParams.MY_NAME}" 
-                }
+              //  }
               steps			{	
                 script {
                   JsonSlurper slurper = new JsonSlurper()
