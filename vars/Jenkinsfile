@@ -2,9 +2,7 @@ import groovy.json.JsonSlurper
 
 echo "Hello from jenkins shared library jenkinsfile....."
 //def pipelineParams= [:]
-def test = new JsonSlurper().parseText '''
-{"MY_NAME": "Jenkins name"}
-'''
+
 //def inputFile = new File('${WORKSPACE}/vars/config.json')
 //def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI())
 pipeline {
@@ -29,6 +27,9 @@ pipeline {
 //def inputJSON = new JsonSlurper().parse(inputFile)
 
 //println inputJSON
+def test = new JsonSlurper().parseText '''
+{"MY_NAME": "Jenkins name"}
+'''
 
 println test
    
