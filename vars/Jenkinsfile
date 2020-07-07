@@ -18,15 +18,22 @@ pipeline {
                     
                     def inputFile = new File("${env.WORKSPACE}/vars/config.json")
                 //def inputJSON = new JsonSlurper().parse(inputFile)
-                    Map parsedJson = new JsonSlurper().parse(inputFile)
+                  //  Map parsedJson = new JsonSlurper().parse(inputFile)
 
-                println parsedJson
+                //println parsedJson
 
-                def test = new JsonSlurper().parseText '''
-                {"MY_NAME": "Jenkins name"}
-                '''
-
-               // println test
+               String jsonString = '''{"menu": {
+"id": "file",
+"tools": {
+"actions": [
+{"id": "new", "title": "New File"},
+{"id": "open", "title": "Open File"},
+{"id": "close", "title": "Close File"}
+],
+"errors": []
+}}}'''
+JsonSlurper slurper = new JsonSlurper()
+Map parsedJson = slurper.parseText(jsonString)
                 myTemplate{ parsedJson }
                 }
                 
