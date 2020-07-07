@@ -35,7 +35,7 @@ pipeline {
 JsonSlurper slurper = new JsonSlurper()
 Map parsedJson = slurper.parseText(jsonString)
                     println parsedJson
-                myTemplate{ parsedJson }
+                myTemplate{ jsonString }
                 }
                 
             }
