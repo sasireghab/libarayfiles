@@ -26,7 +26,7 @@ pipeline {
                 '''
 
                 println test
-                myTemplate{ test }
+                myTemplate{ inputJSON }
                 }
                 
             }
