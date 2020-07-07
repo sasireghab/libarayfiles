@@ -6,10 +6,14 @@ def test = new JsonSlurper().parseText '''
 {"MY_NAME": "Jenkins name"}
 '''
 //def inputFile = new File('${WORKSPACE}/vars/config.json')
-def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI())
+//def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI())
+
+String currentDir = File(".").getAbsoluteFile().getParent()
+println currentDir
+
 //def inputJSON = new JsonSlurper().parse(inputFile)
 
-println inputFile
+//println inputFile
 
 println test
    
