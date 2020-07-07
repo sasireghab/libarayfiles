@@ -20,7 +20,7 @@ import groovy.json.JsonSlurper
          }
       }
 }*/
-def call(String pipelineParams) {
+def call(Map pipelineParams) {
   
   pipeline{	
     agent any	
@@ -32,17 +32,17 @@ def call(String pipelineParams) {
                 }		
            }		
            stage('from lib')		{	
-             // environment {
-                   // def name = "${pipelineParams.MY_NAME}" 
-              //  }
+              environment {
+                    def name = "${pipelineParams.MY_NAME}" 
+                }
               steps			{	
-                script {
+               /* script {
                   JsonSlurper slurper = new JsonSlurper()
                   Map parsedJson = slurper.parseText(pipelineParams)
                   println parsedJson
-                }
+                }*/
                 fromLibarary()
-                  //echo "MY_NAME :: $name"
+                echo "MY_NAME :: $name"
                }		
             }		
          }
