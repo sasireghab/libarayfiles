@@ -37,11 +37,11 @@ def call(Map pipelineParams) {
                     def name = "${pipelineParams.MY_NAME}" 
                 }
               steps			{	
-               /* script {
+               script {
                   JsonSlurper slurper = new JsonSlurper()
                   Map parsedJson = slurper.parseText(pipelineParams)
                   println parsedJson
-                }*/
+                }
                 fromLibarary()
                 echo "MY_NAME :: $name"
                }		
