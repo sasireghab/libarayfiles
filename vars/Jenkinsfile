@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 
 echo "Hello from jenkins shared library jenkinsfile....."
-//def pipelineParams= [:]
+def pipelineParams= [:]
 
 //def inputFile = new File('${WORKSPACE}/vars/config.json')
 //def inputFile = new File(this.class.classLoader.getResourceLoader().loadGroovySource(this.class.name).toURI())
@@ -35,7 +35,8 @@ pipeline {
 JsonSlurper slurper = new JsonSlurper()
 Map parsedJson = slurper.parseText(jsonString)
                     println parsedJson
-                myTemplate{ jsonString }
+                //myTemplate{ jsonString }
+                    myTemplate{ pipelineParams }
                 }
                 
             }
