@@ -23,10 +23,11 @@ pipeline {
 
 
 
-//def inputFile = new File('/var/jenkins_home/workspace/Lib_client_master/vars/config.json')
-//def inputJSON = new JsonSlurper().parse(inputFile)
+def inputFile = new File('${WORKSPACE}/vars/config.json')
+def inputJSON = new JsonSlurper().parse(inputFile)
 
-//println inputJSON
+println inputJSON
+
 def test = new JsonSlurper().parseText '''
 {"MY_NAME": "Jenkins name"}
 '''
